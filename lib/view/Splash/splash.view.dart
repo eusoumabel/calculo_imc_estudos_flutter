@@ -34,7 +34,24 @@ class _SplashViewState extends State<SplashView> {
       body: Stack(
         fit: StackFit.expand,
         children: <Widget>[
-          
+          Container(
+            decoration: BoxDecoration(
+              gradient: sps.backgroundGradient(),
+            ),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ///Text 1
+              sps.textSplashView1(),
+              Padding(padding: EdgeInsets.only(top: 10)),
+              ///Text 2
+              sps.textSplashView2(),
+              Padding(padding: EdgeInsets.only(top: 30)),
+              ///Icon
+              sps.circleAvatarSplashView(),
+            ],
+          )
         ],
       ),
     );
