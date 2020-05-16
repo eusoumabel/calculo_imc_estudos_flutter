@@ -5,6 +5,7 @@ class FirstViewStyles {
     String textAppBar = "IMC Calculator";
     Color backgroundColor = Color.fromRGBO(59, 128, 99, 1);
     return AppBar(
+      
       title: Text(
         textAppBar,
       ),
