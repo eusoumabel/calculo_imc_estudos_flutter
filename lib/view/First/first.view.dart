@@ -18,33 +18,37 @@ class _HomeViewState extends State<HomeView> {
         children: [
           ///Container Verde
           fvs.container1Stack(),
+          SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Padding(padding: EdgeInsets.only(bottom: 90)),
 
-          ///Container Branco
-          fvs.container2Stack(),
+                ///Icon Avatar
+                fvs.iconAvatarStack(),
+                Padding(padding: EdgeInsets.only(bottom: 72)),
 
-          // ///Icon Avatar
-          // fvs.iconAvatarStack(),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Padding(padding: EdgeInsets.only(bottom: 40)),
+                ///Entrada de texto para peso
+                fvs.textField("Weight (Kg)"),
+                SizedBox(height: 40),
 
-              ///Icon Avatar
-              fvs.iconAvatarStack(),
-              Padding(padding: EdgeInsets.only(bottom: 40)),
+                ///Entrada de texto para altura
+                fvs.textField("Height (Cm)"),
+                SizedBox(height: 72),
 
-              ///Entrada de texto para peso
-              fvs.textField("Weight (Kg)"),
+                ///Botão de Calcular
+                fvs.calculateButton(),
+                SizedBox(height: 40),
 
-              SizedBox(height: 40,),
-              ///Entrada de texto para altura
-              fvs.textField("Height (Cm)"),
+                ///Texto "Results"
+                fvs.resultText(),
+                SizedBox(height: 40),
 
-              ///Botão de Calcular
-              ///Texto "Results"
-              ///Saída de texto da classificação do IMC
-              ///Saída do resultado do cálculo
-            ],
+                ///Saída de texto da classificação do IMC
+
+                ///Saída do resultado do cálculo
+              ],
+            ),
           ),
         ],
       ),

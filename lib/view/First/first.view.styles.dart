@@ -40,9 +40,9 @@ class FirstViewStyles {
 
   ///Icon Avatar Stack
   Align iconAvatarStack() {
-    Color backgroundColor = Color.fromRGBO(44, 93, 72, 1);
+    Color backgroundColor = Color.fromRGBO(59, 128, 99, 1);
     Color colorIcon = Colors.white;
-    double iconSize = 50.0;
+    double iconSize = 60.0;
     return Align(
       alignment: Alignment(0, -0.74),
       child: CircleAvatar(
@@ -57,7 +57,7 @@ class FirstViewStyles {
     );
   }
 
-  ///Entrada de dados para Peso
+  ///Entrada de dados para Peso/Altura
   Container textField(String hintText) {
     double height = 45;
     double width = 370;
@@ -71,7 +71,7 @@ class FirstViewStyles {
         borderRadius: BorderRadius.circular(27),
       ),
       child: TextField(
-        keyboardType: TextInputType.number,
+        keyboardType: TextInputType.numberWithOptions(signed: true, decimal: true),
         decoration: InputDecoration(
           contentPadding: EdgeInsets.only(left: 20),
           border: InputBorder.none,
@@ -80,6 +80,48 @@ class FirstViewStyles {
             color: hintTextColor,
           ),
         ),
+      ),
+    );
+  }
+
+  ///Botão de Calcular
+  Container calculateButton() {
+    double height = 45;
+    double width = 370;
+    Color buttonColor = Color.fromRGBO(44, 93, 72, 1);
+    String buttonText = "Calculate";
+    double fontSize = 18;
+    Color buttonTextColor = Colors.white;
+    return Container(
+      height: height,
+      width: width,
+      child: RaisedButton(
+        onPressed: () {},
+        color: buttonColor,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(27),
+        ),
+        child: Text(
+          buttonText,
+          style: TextStyle(
+            color: buttonTextColor,
+            fontSize: fontSize,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Text resultText() {
+    String text = "Results";
+    Color textColor = Color.fromRGBO(44, 93, 72, 1);
+    double fontSize = 23;
+    return Text(
+      text,
+      style: TextStyle(
+        color: textColor,
+        fontSize: fontSize,
+        fontWeight: FontWeight.bold,
       ),
     );
   }
