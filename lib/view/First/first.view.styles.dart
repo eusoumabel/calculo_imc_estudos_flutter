@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//import 'package:icon_shadow/icon_shadow.dart';
 
 class FirstViewStyles {
   ///BackGround Color
@@ -43,15 +44,26 @@ class FirstViewStyles {
     Color backgroundColor = Color.fromRGBO(59, 128, 99, 1);
     Color colorIcon = Colors.white;
     double iconSize = 60.0;
+    Color colorShadow = Color.fromRGBO(0, 0, 0, 0.31);
+    double blourRadius = 20;
     return Align(
       alignment: Alignment(0, -0.74),
-      child: CircleAvatar(
-        backgroundColor: backgroundColor,
-        radius: iconSize,
-        child: Icon(
-          Icons.fitness_center,
-          color: colorIcon,
-          size: iconSize,
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(50),
+          boxShadow: [BoxShadow(
+            color: colorShadow,
+            blurRadius: blourRadius,
+          )],
+        ),
+        child: CircleAvatar(
+          backgroundColor: backgroundColor,
+          radius: iconSize,
+          child: Icon(
+            Icons.fitness_center,
+            color: colorIcon,
+            size: iconSize,
+          ),
         ),
       ),
     );
@@ -112,6 +124,7 @@ class FirstViewStyles {
     );
   }
 
+  ///Texto de Resultado
   Text resultText() {
     String text = "Results";
     Color textColor = Color.fromRGBO(44, 93, 72, 1);
