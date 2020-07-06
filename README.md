@@ -6,12 +6,12 @@
 
 1. Splash Screen
 
-![Simulator Screen Shot - iPhone 11 - 2020-07-06 at 00 36 03](https://user-images.githubusercontent.com/51540772/86553436-1f68a880-bf21-11ea-8aae-40e6753e77d6.png)
+![Webp net-resizeimage](https://user-images.githubusercontent.com/51540772/86553998-c0a42e80-bf22-11ea-8401-a307a0c50155.jpg)
 
 
 2. HomeScreen
 
-![Simulator Screen Shot - iPhone 11 - 2020-07-06 at 00 35 57](https://user-images.githubusercontent.com/51540772/86553470-31e2e200-bf21-11ea-8e5c-623b2ce8b060.png)
+![Webp net-resizeimage](https://user-images.githubusercontent.com/51540772/86554013-cc8ff080-bf22-11ea-9769-064a12776978.png)
 
 
 #### Social Medias
