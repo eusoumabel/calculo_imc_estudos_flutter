@@ -1,17 +1,27 @@
-# calculo_imc
+# IMC Calculator
 
-A new Flutter project.
+#### A simple and modern IMC Calculator
 
-## Getting Started
+## Screens
 
-This project is a starting point for a Flutter application.
+1. Splash Screen
 
-A few resources to get you started if this is your first Flutter project:
+![Simulator Screen Shot - iPhone 11 - 2020-07-06 at 00 36 03](https://user-images.githubusercontent.com/51540772/86553436-1f68a880-bf21-11ea-8aae-40e6753e77d6.png)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# calculo_imc_estudos_flutter
+2. HomeScreen
+
+![Simulator Screen Shot - iPhone 11 - 2020-07-06 at 00 35 57](https://user-images.githubusercontent.com/51540772/86553470-31e2e200-bf21-11ea-8e5c-623b2ce8b060.png)
+
+
+#### Social Medias
+
+[Behance](https://www.behance.net/estermabel)
+
+#### Project on Dribbble
+
+[Dribbble](https://dribbble.com/estermabel)
+
+#### My Portfolio
+
+[Portfolio](https://estermabel.myportfolio.com)
