@@ -6,7 +6,7 @@ class FirstViewStyles {
   Color backGroundColor() => Colors.white;
 
   ///AppBar
-  AppBar appBar() {
+  AppBar appBar(onPressed) {
     String textAppBar = "IMC Calculator";
     Color backgroundColor = Color.fromRGBO(59, 128, 99, 1);
     return AppBar(
@@ -16,7 +16,7 @@ class FirstViewStyles {
       centerTitle: true,
       backgroundColor: backgroundColor,
       actions: [
-        IconButton(icon: Icon(Icons.refresh), onPressed: () {}),
+        IconButton(icon: Icon(Icons.refresh), onPressed: onPressed),
       ],
     );
   }
@@ -51,10 +51,12 @@ class FirstViewStyles {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(50),
-          boxShadow: [BoxShadow(
-            color: colorShadow,
-            blurRadius: blourRadius,
-          )],
+          boxShadow: [
+            BoxShadow(
+              color: colorShadow,
+              blurRadius: blourRadius,
+            )
+          ],
         ),
         child: CircleAvatar(
           backgroundColor: backgroundColor,
@@ -70,7 +72,7 @@ class FirstViewStyles {
   }
 
   ///Entrada de dados para Peso/Altura
-  Container textField(String hintText) {
+  Container textFormField(String hintText, controller) {
     double height = 45;
     double width = 370;
     Color containerColor = Colors.white;
@@ -82,8 +84,9 @@ class FirstViewStyles {
         color: containerColor,
         borderRadius: BorderRadius.circular(27),
       ),
-      child: TextField(
-        keyboardType: TextInputType.numberWithOptions(signed: true, decimal: true),
+      child: TextFormField(
+        keyboardType:
+            TextInputType.numberWithOptions(signed: true, decimal: true),
         decoration: InputDecoration(
           contentPadding: EdgeInsets.only(left: 20),
           border: InputBorder.none,
@@ -92,12 +95,19 @@ class FirstViewStyles {
             color: hintTextColor,
           ),
         ),
+        controller: controller,
+        // ignore: missing_return
+        validator: (value) {
+          if (value.isEmpty) {
+            return "Insert the data!";
+          }
+        },
       ),
     );
   }
 
   ///Botão de Calcular
-  Container calculateButton() {
+  Container calculateButton(onPressed, formKey) {
     double height = 45;
     double width = 370;
     Color buttonColor = Color.fromRGBO(44, 93, 72, 1);
@@ -108,7 +118,12 @@ class FirstViewStyles {
       height: height,
       width: width,
       child: RaisedButton(
-        onPressed: () {},
+        onPressed: () {
+          if (formKey.currentState.validate()) {
+            onPressed();
+          }
+        },
+        //onPressed,
         color: buttonColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(27),
@@ -125,10 +140,16 @@ class FirstViewStyles {
   }
 
   ///Texto de Resultado
-  Text resultText() {
-    String text = "Results";
-    Color textColor = Color.fromRGBO(44, 93, 72, 1);
+  Text resultText(String text) {
+    Color textColor1 = Color.fromRGBO(44, 93, 72, 1);
+    Color textColor2 = Colors.grey[200];
+    Color textColor;
     double fontSize = 23;
+    if (text == "Results") {
+      textColor = textColor1;
+    } else {
+      textColor = textColor2;
+    }
     return Text(
       text,
       style: TextStyle(
